@@ -1,0 +1,677 @@
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="author" content="Pascal Armina">
+      <meta name="description" content="Asociaţie ONG pentru persoanele în vârstă">
+      <meta name="keywords" content="ONG, Asociaţie, Donaţii, Vârstnici">
+      <title>Asociaţia Aproape pentru vârstnici</title>
+	  <style>
+         * {box-sizing:border-box;}
+         h1,h2 {
+         word-spacing: 10px;
+         text-shadow: 0px 1px 2px red;
+         color: White;
+		 font-weight:bold;
+         }
+         .logo
+         {
+         width:100%;
+         position:relative;
+         }
+         .logo2{margin:auto;width:50%;}
+         .raw{display:inline-flex;}
+         body {
+         margin: 0;
+         font-family: Century Gothic;
+         background: rgb(221,90,121);
+         background: radial-gradient(circle, rgba(221,90,121,1) 18%, rgba(224,182,224,1) 100%);
+         }
+         .clearfix::after {
+         content: "";
+         clear: both;
+         display: table;
+         }
+         .boxh2 {
+         background-color:PaleVioletRed;
+         padding: 1px 5px 1px 5px;
+         margin:7px 7px 7px 7px;
+         }
+         .boxh3 {
+         font-family:Sitka Text;
+         background-color:White;
+         color: MediumVioletRed;
+         border: 3px solid MediumVioletRed;
+         padding: 10px 10px 10px 10px;
+         margin:5px 10px 5px 7px;
+         font-size: 1.1vw;
+         width: device-width;
+         initial-scale:1.1;
+         }
+         .boxh32 {
+         font-family:Sitka Text;
+         background-color:White;
+         color: MediumVioletRed;
+         border: 3px solid MediumVioletRed;
+         padding: 10px 10px 10px 10px;
+         margin:5px 10px 5px 44px;
+         font-size: 1.1vw;
+         width: device-width;
+         initial-scale:1.1;
+         }
+         .boxh33 {
+         font-family:Sitka Text;
+         background-color:White;
+         color: MediumVioletRed;
+         border: 3px solid MediumVioletRed;
+         padding: 10px 10px 10px 10px;
+         margin:10px 0px 5px 0px;
+         font-size: 1.1vw;
+         width: device-width;
+         initial-scale:1.1;
+         }
+         .boxproiecte {
+         background-image:url("home-2-2.jpg");
+         color: Teal;
+         border: 5px solid Teal;
+         padding: 30px 30px 30px 30px;
+         margin:30px 30px 30px 30px;
+         font-size: 1.1vw;
+         width: device-width;
+         initial-scale:1.1;
+         }
+         .centerbox {
+         margin: auto;
+         width: 50%;
+         }
+         .abc{
+         text-align: center;
+         font-family:Century Gothic;
+         }
+         .center {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 30%;
+         }
+         .centerbox {
+         margin: auto;
+         width: 33.33%;
+         padding: 10px;
+         }
+         .column {
+         float: left;
+         width: 33.33%;
+         }
+         .column2 {
+         float: left;
+         width: 16.6%;
+         }
+         .column3 {
+         margin-left:5px;
+         margin-right:5px;
+         float:left;
+         width:22%;
+         }
+         .column3a {
+         margin-left:5px;
+         margin-right:5px;
+         float:right;
+         width:22%;
+         }
+         .row:after {
+         content: "";
+         display: table;
+         clear: both;
+         }
+         .imgprinc
+         {
+         width:100%;
+         }
+         .stanga {
+		 padding:5px;
+         float:left;
+         width:5%;
+         }			
+         .dreapta {
+         float:left;
+         width:95%;
+         padding-left: 10px;
+         font-family:Sitka Text;
+         }
+         .stanga2 {
+         float:right;
+		 padding-left:20px;
+         width:5%;
+         }
+         .dreapta2 {
+         float:right;
+         width:95%;
+         padding-left: 10px;
+         font-family:Sitka Text;
+         }
+         .imglogouri{
+         float:left;
+         }
+         .angajati{
+         width:device-width;
+         text-align:center;
+         }
+         .container {
+         position: relative;
+         width:100%;
+         }
+         .image {
+         display: block;
+         width: 100%;
+         height: auto;
+         }
+         .overlay {
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         height: 100%;
+         width: 100%;
+         opacity: 0;
+         transition: .5s ease;
+         background-color: Red;
+         }
+         .container:hover .overlay {
+         opacity: 1;
+         }
+         .text {
+         color: white;
+         font-size: 20px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         -ms-transform: translate(-50%, -50%);
+         }
+         .hero-image {
+         background-image: url("woman27.jpg");
+         background-color: #cccccc;
+         height: 380px;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         position: relative;
+         }
+         .hero-text {
+         width: device-width;
+         initial-scale:1.0;
+         font-size: 1.5vw;
+         color: white;
+         text-shadow: 0px 3px 4px black;
+         text-align:center;
+         }
+         .fadiferenta{
+         font-size: 50px;
+         text-align: center;
+         color: white;
+         text-shadow: 0px 3px 4px black;
+		 font-style: italic;
+         }
+         .boxparteneri {
+         text-align: center;
+         box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+         background-color:White;
+         color: MediumVioletRed;
+         border: 3px solid MediumVioletRed;
+         padding: 10px 5px 10px 5px;
+         margin:10px 0px 5px 0px;
+         width:100%;
+         }
+         .boxparteneri:hover {
+         transform: scale(1.1, 1.2);
+         } 
+         .boxdonatie {
+         height:auto;
+         }
+         .boxmare {
+         width: device-width;
+         initial-scale:1.1;
+         text-align:center;
+         }
+         .fundalfinal{
+         background: rgb(255,255,255);
+         background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(254,254,254,1) 22%, rgba(182,166,166,1) 63%, rgba(75,67,67,1) 100%);
+         }
+         .imaginesfarsit
+         { 
+         width:100%;
+         }
+         .footer {
+         background-color: #ffffff;
+         padding: 10px;
+         text-align: center;
+         }
+         .textfinaltitlu {
+         font-size: 2vw;
+         width: device-width;
+         initial-scale:1.1;
+         text-align:center;
+         color:#ecdede;
+         }
+         .textfinala{
+         font-size: 1.3vw;
+         width: device-width;
+         initial-scale:1.1;
+         text-align:left;
+         color:#d0c2c2;
+         }
+         .textfinalaa{
+         font-size: 1.3vw;
+         width: device-width;
+         initial-scale:1.1;
+         text-align:left;
+         color:#877878;
+         }
+         .textfinalb{
+         font-size: 1.3vw;
+         width: device-width;
+         initial-scale:1.1;
+         text-align:left;
+         color:#d0c2c2;
+         }
+         .textfinalc{
+         font-size: 1.3vw;
+         width: device-width;
+         initial-scale:1.1;
+         text-align:left;
+         color:#877878;
+         }
+         .columnfinal {
+         float: left;
+         width: 35%;
+         padding: 10px;
+         }
+         .columnfinala {
+         float: left;
+         width: 25%;
+         padding: 10px;
+         }
+         .columnfinalb {
+         float: left;
+         width: 35%;
+         padding: 10px;
+         }
+         .butondone
+         {
+         background-color: #4CAF50;
+         border: none;
+         color: white;
+         padding: 15px 32px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+         .butondone:hover {
+         background-color: lightgreen;
+         color: white;
+         }
+         .titlucentrat{
+         text-align:center;
+         }
+         .titlucentrata{
+		 padding-left:20px;
+         text-align:left;
+         }
+         .echipa{
+         text-align:left;
+         font-size: 1.3vw;
+         width: device-width;
+         initial-scale:1.1;
+         }
+      </style>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   </head>
+   <body>
+      <header>
+            <div class="logo2">
+               <div class="raw">
+                  <div class="w3-container w3-center w3-animate-top">
+                     <img src="home64px.png" alt="logo casa cu inima">
+                     <h1><strong>Asociaţia Aproape pentru vârstnici</strong> <h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div class="boxh2 clearfix">
+         <div class="w3-container w3-center w3-animate-top">
+			<div class="abc">
+            <h2 >“A şti cum să îmbătrâneşti este o capodoperă a înţelepciunii, şi unul dintre cele mai dificile capitole din marea artă de a trăi.“-Henri Amiel
+            </h2>
+			</div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="column">
+            <div class="boxh3 clearfix">
+               <div class="w3-container w3-center w3-animate-bottom">
+                  <h3><b>CINE SUNTEM NOI ?</b></h3>
+                  <p>Suntem tineri voluntari, colaboratori şi parteneri din toată ţara ce doresc să vadă o schimbare în vieţile oamenilor în vârstă. <br><br>Astfel, am creat o organizaţie neguvernamentală şi nonprofit ce îşi îndreaptă atenţia spre astfel de cazuri defavorizate.<br><br> Cu ajutorul donaţiilor, sponsorizărilor şi al fondurilor obţinute de la autorităţi prin aplicarea la diferite proiecte, reuşim să ne îndeplinim scopul.</p>
+                  <br>
+               </div>
+            </div>
+         </div>
+         <div class="column">
+            <div class="container">
+               <img src="misc (2).jpg" alt="cuplu de batrani zambind" class="imgprinc">
+               <div class="overlay">
+                  <div class="text">Ne implicăm, colaborăm, facem!</div>
+               </div>
+            </div>
+         </div>
+         <div class="column">
+            <div class="boxh32 clearfix">
+               <div class="w3-container w3-center w3-animate-bottom">
+                  <h3><b>CE FACEM NOI?</b></h3>
+                  <p>Îmbunătăţim viaţa vârstnicilor prin :</p>
+                  <ul type="cyrcle">
+                     <li>Centre dedicate acestora construite cu ajutorul donaţiilor</li>
+                     <li>Activităţi culturale şi sportive în fiecare zi pentru aceştia</li>
+                     <li>Regimul alimentar creat de către nutriţioniştii noştri</li>
+                     <li>Îngrijirea acestora 24 din 7 de către un personal dedicat</li>
+                     <li>Prezenţa permanentă a unui cadru medical în interiorul fiecărui centru </li>
+                  </ul>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="centerbox">
+         <div class="boxh33 clearfix">
+            <div class="w3-container w3-center w3-animate-bottom">
+               <h3><b>DE CE FACEM ASTA?</b></h3>
+               <p>Am observat nevoia comunităţii de a asigura asistenţă persoanelor în vârstă care nu mai reuşeşc să îşi ducă la bun sfârşit activităţile zilnice din diverse motive.</p>
+               <br>
+            </div>
+         </div>
+      </div>
+      <div class="boxproiecte clearfix">
+         <div class="titlucentrat">
+            <h4><b>Proiectele noastre:</b></h4>
+         </div>
+         <div>
+            <img src="haine.png" alt="logo cu haine" class="stanga" class="imglogouri">
+            <p class="titlucentrata"><i><b>Hăinuţe retro pentru bătrânii moderni!</i></b>
+            <div class="dreapta"> În noiembrie 2019, am lansat o campanie de donaţie prin care participanţii îşi ofereau obiectele vestimentare pe care nu le mai foloseau vârstnicilor. Am reuşit să strangem, în total, 350 de astfel de articole vestimentare ce au adus zâmbete pe feţele bătrânilor. 
+               <br><br>
+            </div>
+            </p>
+         </div>
+         <div>
+            <img src="craciun.png" alt="logo craciun" class="stanga2" class="imglogouri">
+            <p class="titlucentrata"><i><b>Crăciunul…pe dos!</i></b>
+            <div class ="dreapta2" >
+               Cine spune că doar copiii trebuie să primească cadouri în ajunul Crăciunului ? În decembrie 2019, vârstnicii s-au putut bucura de numeroase cadouri personalizate în funcţie de dorinţele acestora. De la cărţi la decoraţiuni şi la echipamente sportive, toate obiectele au fost achiziţionate din donaţiile oamenilor.
+               <br><br>
+            </div>
+            </p>
+         </div>
+         <div>
+            <img src="travel.png" alt="logo cu bagaj" class="stanga" class="imglogouri">
+            <p class="titlucentrata"><i><b>Primăvara în Ungaria</i></b><br>
+            <div class="dreapta">
+               1 Martie 2020 a reprezentat data începerii sejurului organizat în centrul de relaxare Termalviz din Budapesta. Vârstnicii s-au putut bucura de 7 zile de programe spa, piscine cu apă termală, saune şi terapii revigorante pentru a le îmbunătăţi sănătatea. Întreg programul a fost verificat şi avizat de către cadrele medicale partenere.
+            </div>
+            </p>
+         </div>
+      </div>
+      <div class="w3-container">
+         <div class="w3-panel w3-round-xxlarge w3-teal" >
+            <div class="echipa">
+               <b>
+                  <p>Echipa noastră</p>
+               </b>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="man22.jpg" alt="directorul asociaţiei" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>URSEA ADRIAN, directorul asociaţiei</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="woman07.jpg" alt="coordonatoarea fundraising" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>POPA ANA, coordonatoare fundraising</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="woman17.jpg" alt="secretara" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>VOICILĂ ELENA, secretară</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="woman09.jpg" alt="psiholoaga" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>ŞTEFĂNESCU AURELIA, psiholog</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="man24.jpg" alt="doctor" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>CERNAT MIRCEA, doctor</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="woman26.jpg" alt="asistentă medicală" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>ARDELEANU ILEANA, asistentă medicală</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <br>
+      <div class="row">
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="woman14.jpg" alt="nutriţionistă" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>COBZARU ALINA, nutriţionistă</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="man35.jpg" alt="nutriţionist" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>COSTEA DORIN, nutriţionist</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="woman11.jpg" alt="îngrijitoare unu" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>DUŢĂ DENISA, îngrijitoare</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="man36.jpg" alt="îngrijitor" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>MACOVEI TUDOR, îngrijitor</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="woman19.jpg" alt="îngrijitoare doi" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>OLTEAN ANGELA, îngrijitoare</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="column2">
+            <div class="w3-container">
+               <div class="angajati">
+                  <div class="w3-card-4">
+                     <img src="man19.jpg" alt="responsabil activităţi sportive şi culturale" class="imgprinc">
+                     <div class="w3-container w3-center">
+                        <p>POP DAN,responsabil activităţi sportive şi culturale</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="w3-container">
+         <div class="w3-panel w3-round-xxlarge w3-teal">
+            <div class="echipa">
+               <b>
+                  <p>Parteneri </p>
+               </b>
+            </div>
+         </div>
+      </div>
+      <div class="boxmare clearfix">
+         <div class="row clearfix">
+            <div class="column3 clearfix">
+               <div class="boxparteneri clearfix"  >
+                  <img src="animal.png" alt="logo asociaţia pisicuţelor abandonate" class="boxmare clearfix">
+                  <p>Asociaţia Pisicuţelor Abandonate</p>
+               </div>
+            </div>
+            <div class="column3 clearfix">
+               <div class="boxparteneri clearfix" >
+                  <img src="care.png" alt="logo fundaţia copiilor orfani" class="boxmare clearfix">
+                  <p>Fundaţia Copiilor Orfani</p>
+               </div>
+            </div>
+            <div class="column3a clearfix">
+               <div class="boxparteneri clearfix" >
+                  <img src="help.png" alt="logo asociaţia mână pentru mână" class="boxmare clearfix">
+                  <p>Asociaţia Mână pentru mână</p>
+               </div>
+            </div>
+            <div class="column3a clearfix">
+               <div class="boxparteneri clearfix" >
+                  <img src="healthcare.png" alt="logo institutul medicilor darnici" class="boxmare clearfix">
+                  <p>Institutul Medicilor Darnici</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <br><br>
+      <div class="hero-image">
+		<div class="fadiferenta">
+         <h2><b>Fă o diferenţă!</b></h2>
+		 </div>
+         <div class="hero-text">
+            <div class="boxdonatie clearfix">
+               <p><b>Fii alături de noi şi ajută-ne să ne îndeplinim misiunea ! Bătrâneţea nu este una dintre cele mai uşoare etape ale vieţii, aşa că le poţi fi alături vârstnicilor prin suport financiar. Orice ajutor este bine primit, iar recunoştinţa nu va lipsi din partea noastră şi a bătrânilor. Fără susţinerea tuturor, proiectele din cadrul fundaţiei “Aproape pentru vârstnici “ nu ar fi putut să apară. Implică-te !</b></p>
+               <button class="butondone"><a href="Donatii.html">Donează!</a></button>
+            </div>
+         </div>
+      </div>
+      <div class="fundalfinal">
+         <div class="row">
+            <div class="columnfinala">
+               <img src="man02.jpg" alt="batran zambind" class="imaginesfarsit">
+            </div>
+            <b>
+               <div class="textfinaltitlu" > Dacă te afli în situaţia în care doreşti să apelezi la ajutorul nostru, nu ezita să ne contactezi.</div>
+            </b>
+            <br>
+            <div class="columnfinal clearfix">
+               <div class="textfinala" >
+                  <img src="location-pin.png"> 
+                  Braşov – str. Ioan Ursu, nr. 10  <br><br>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.8753747831856!2d25.60795295107244!3d45.67340212737814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35beee0709fe5%3A0x70c61def6577b7ff!2sStrada%20Ioan%20Ursu%2010%2C%20Bra%C8%99ov%20500170!5e0!3m2!1sro!2sro!4v1603321172542!5m2!1sro!2sro" width="300" height="100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+               </div>
+               <div class="textfinalaa" >
+                  <img src="location-pin.png"> 
+                  Cluj-Napoca – str. G-ral Traian Moşoiu, nr. 48 <br><br>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.314557097476!2d23.602026837865107!3d46.770492013077906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490c23666f3477%3A0x5ed730a16eb32e2b!2sStrada%20General%20Traian%20Mo%C8%99oiu%2048%2C%20Cluj-Napoca%20400132!5e0!3m2!1sro!2sro!4v1603320949939!5m2!1sro!2sro" width="300" height="100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+               </div>
+            </div>
+            <div class="columnfinalb clearfix">
+               <div class="textfinalb">
+                  <img src="mail-send.png"> 
+                  Mail : aproape-pentru-varstnici@yahoo.com
+               </div>
+               <br>
+               <br>
+               <div class="textfinalc">
+                  <img src="dial-phone.png"> 
+                  Telefon : 0267 xxx xxx
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer">
+         <p>Site creat de Pascal Armina</p>
+      </div>
+   </body>
+</html>
+
